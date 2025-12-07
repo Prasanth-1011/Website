@@ -1,0 +1,284 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra Collections</title>
+    <link rel="stylesheet" href="./Styles/Styles.css">
+    <link rel="stylesheet" href="./Styles/Collections.css">
+    <link rel="stylesheet" href="./Styles/Responsive.css">
+    <link rel="shortcut icon" href="https://prasanth-1011.github.io/Website/Assets/Logo_Circle.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header__box align-center">
+            <h2 class="header__message">Free Delivery, Returns And Exchange</h2>
+            <span class="material-icons disturb">do_not_disturb_on</span>
+        </div>
+
+        <section class="header__container align-center">
+            <div class="header__mobile align-center">
+                <span class="material-icons menu">menu</span>
+                <span class="material-icons space" style="color: transparent;">menu</span>
+                <span class="material-icons space" style="color: transparent;">menu</span>
+                <span class="material-icons space" style="color: transparent;">menu</span>
+            </div>
+
+            <a class="header__logo" href="./index.html"><img
+                    src="https://prasanth-1011.github.io/Website/Assets/Logo_Square.png" alt="Logo"></a>
+
+            <nav class="align-center header__links">
+                <a href="./index.html" class="header__links__home">Home</a>
+                <a href="#classics" class="header__links__classics">Classics</a>
+                <a href="#trending" class="header__links__trending">Trending</a>
+                <a href="./Contact.html">Contact</a>
+                <a href="#shirts">Shirts</a>
+                <a href="#brands">Brands</a>
+                <a href="#shoes">Shoes</a>
+            </nav>
+
+            <span class="align-center">
+                <i class="material-icons">search</i>
+                <p>Search</p>
+            </span>
+
+            <nav class="header__icons align-center">
+                <i class="material-icons person">person</i>
+                <i class="material-icons">shopping_cart</i>
+                <i class="material-icons">favorite</i>
+            </nav>
+        </section>
+
+        <nav class="header__mobile__links flex-center">
+            <span class="material-icons menu">menu</span>
+            <a href="./index.html" class="header__links__home">Home</a>
+            <a href="#classics" class="header__links__classics">Classics</a>
+            <a href="#trending" class="header__links__trending">Trending</a>
+            <a href="./Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filters">
+            <h1>Filters</h1>
+
+            <div class="filters__product">
+                <h1>Product</h1>
+                <span class="align-center">
+                    <input type="checkbox" id="filters__shirts">
+                    <label for="filters__shirts">Shirts</label>
+                </span>
+                <span class="align-center">
+                    <input type="checkbox" id="filters__tshirts">
+                    <label for="filters__tshirts">T-Shirts</label>
+                </span>
+                <span class="align-center">
+                    <input type="checkbox" id="filters__shoes">
+                    <label for="filters__shoes">Shoes</label>
+                </span>
+            </div>
+
+            <div class="filters__price">
+                <h1>Price</h1>
+                <input type="range" class="product__price">
+                <p class="price__value"></p>
+            </div>
+
+            <div class="filters__color">
+                <h1>Color</h1>
+                <span class="align-center">
+                    <input type="checkbox" id="color__red">
+                    <label for="color__red">Red</label>
+                </span>
+                <span class="align-center">
+                    <input type="checkbox" id="color__blue">
+                    <label for="color__blue">Blue</label>
+                </span>
+                <span class="align-center">
+                    <input type="checkbox" id="color__black">
+                    <label for="color__black">Black</label>
+                </span>
+                <span class="align-center">
+                    <input type="checkbox" id="color__white">
+                    <label for="color__white">White</label>
+                </span>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="flex-center">
+                <h1>Products</h1>
+                <input class="products__search" type="text" placeholder="Search For Products">
+            </div>
+
+            <div class="products__container">
+                <figure data-tags="shirts,color-grey">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Classics_1011.png"
+                        alt="Men's Solid Casual Grey Shirt">
+                    <figcaption>
+                        <h2>Grey Casual Shirt</h2>
+                        <p>Rs. 1,499</p>
+                        <p>4.5 &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="shirts,color-brown">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Classics_1012.png"
+                        alt="Indian Terrain Solid Casual Shirt">
+                    <figcaption>
+                        <h2>Terrain Casual Shirt</h2>
+                        <p>Rs. 1,499</p>
+                        <p>4.4 &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="shirts,color-white">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Classics_1013.png" alt="Addy's Men Shirt">
+                    <figcaption>
+                        <h2>Addy's Men Shirt</h2>
+                        <p>Rs. 1,199</p>
+                        <p>4.2 &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="tshirts,color-blue">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Classics_1014.png"
+                        alt="Men's Solid Blue T-Shirt">
+                    <figcaption>
+                        <h2>Solid Blue T-Shirt</h2>
+                        <p>Rs. 399</p>
+                        <p>4.6 &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="shirts,color-multi">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Lamine_Shirt.png" alt="Lamine Shirt">
+                    <figcaption>
+                        <h2>Lamine T-Shirt</h2>
+                        <p>Rs. 1,299</p>
+                        <p>4.3 &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="shoes,color-black">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Image_1011.png" alt="Red Sports Shoe">
+                    <figcaption>
+                        <h2>Black Sports Shoe</h2>
+                        <p>Rs. 2,499</p>
+                        <p>4.8 &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="shoes,color-white">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Image_1021.png" alt="Blue Running Shoe">
+                    <figcaption>
+                        <h2>White Running Shoe</h2>
+                        <p>Rs. 2,999</p>
+                        <p>4.7 &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="shoes,color-red,color-white">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Image_1031.png" alt="Black Sneaker">
+                    <figcaption>
+                        <h2>Red White Sports Shoe</h2>
+                        <p>Rs. 1,999</p>
+                        <p>4.5 &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="shirts,color-grey">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Classics_1011.png"
+                        alt="Men's Solid Casual Grey Shirt">
+                    <figcaption>
+                        <h2>Grey Casual Shirt</h2>
+                        <p>Rs. 1,499</p>
+                        <p>4.5 &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="shirts,color-brown">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Classics_1012.png"
+                        alt="Indian Terrain Solid Casual Shirt">
+                    <figcaption>
+                        <h2>Terrain Casual Shirt</h2>
+                        <p>Rs. 1,499</p>
+                        <p>4.4 &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="shoes,color-black,color-white">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Image_1011.png" alt="Red Sports Shoe">
+                    <figcaption>
+                        <h2>Black White Sports Shoe</h2>
+                        <p>Rs. 2,499</p>
+                        <p>4.8 &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+
+                <figure data-tags="shoes,color-white,color-black">
+                    <img src="https://prasanth-1011.github.io/Website/Assets/Image_1021.png" alt="Blue Running Shoe">
+                    <figcaption>
+                        <h2>White Black Running Shoe</h2>
+                        <p>Rs. 2,999</p>
+                        <p>4.7 &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <button>Add To Cart</button>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="support">
+            <h2>Support</h2>
+            <a href="">Help Center</a>
+            <a href="">Track Order</a>
+            <a href="">Returns & Exchange</a>
+            <a href="">Cookie Settings</a>
+        </div>
+
+        <div class="about">
+            <h2>About</h2>
+            <a href="">Company</a>
+            <a href="">Investors</a>
+            <a href="">Careers</a>
+            <a href="">Sustainability</a>
+        </div>
+
+        <div class="stay">
+            <h2>Stay Updated</h2>
+            <p>Get the latest updates and be informed about our new arrivals and special offers.</p>
+            <nav class="icons align-center">
+                <a href="" target="" class="fab fa-whatsapp"></a>
+                <a href="" target="" class="fab fa-facebook-f"></a>
+                <a href="" target="" class="fab fa-instagram"></a>
+                <a href="" target="" class="fab fa-twitter"></a>
+                <a href="" target="" class="fab fa-pinterest"></a>
+                <a href="" target="" class="fab fa-youtube"></a>
+            </nav>
+        </div>
+
+        <h4>&copy; 2025 Commerce</h4>
+    </footer>
+
+    <script src="Collections.js"></script>
+    <script src="Animation.js"></script>
+</body>
+
+</html>

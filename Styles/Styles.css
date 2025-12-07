@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icons */
+.material-icons,
+.material-symbols-outlined {
+    cursor: pointer;
+}
+
+.material-icons.person,
+.material-icons.menu {
+    font-size: xx-large;
+}
+
+.material-icons.menu {
+    color: white;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.material-icons.chevron_left,
+.material-icons.chevron_right {
+    font-size: xx-large;
+    position: absolute;
+    right: 2rem;
+    color: black;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.material-icons.chevron_left {
+    top: 40%;
+}
+
+.material-icons.chevron_right {
+    bottom: 40%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    scroll-padding-top: 9rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: white;
+
+    position: sticky;
+    top: 0px;
+    z-index: 50;
+}
+
+.header__mobile {
+    display: none;
+}
+
+.header__box {
+    width: 100%;
+    height: 3rem;
+    padding: 0 3rem;
+}
+
+.header__message {
+    margin: auto;
+    width: fit-content;
+    font-weight: 100;
+    text-align: center;
+    font-family: 'Rubik Glitch', 'Rubik', sans-serif;
+}
+
+.glitch {
+    animation: glitch 300ms infinite;
+}
+
+@keyframes glitch {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.disturb {
+    cursor: pointer;
+}
+
+.header__container {
+    width: 100%;
+    height: 4rem;
+    color: white;
+    padding: 0 3rem;
+    background-color: black;
+    justify-content: space-between;
+}
+
+.header__logo img {
+    width: 8rem;
+    height: 4rem;
+    object-fit: cover;
+}
+
+.header__container nav {
+    gap: 1.5rem;
+}
+
+.header__container nav a,
+.header__mobile__links a {
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+
+.header__container nav a:hover {
+    padding: 0.25rem 0;
+    transition: padding 300ms ease-in-out;
+    border-bottom: 3px solid goldenrod;
+}
+
+.header__container span.align-center {
+    gap: 1rem;
+    width: 15rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.header__icons {
+    gap: 0.75rem;
+}
+
+.header__mobile__links {
+    display: none;
+}
+
+/* Main */
+
+main {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.back__image {
+    width: 90%;
+    height: 65vh;
+    margin: auto;
+    color: white;
+    position: relative;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.back__image h1 {
+    color: black;
+    font-size: xx-large;
+}
+
+.background__images {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    border-radius: 1rem;
+    overflow: clip;
+}
+
+.slider__box {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider__one {
+    width: 70%;
+}
+
+.slider__two {
+    width: 30%;
+}
+
+.slider__box img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: left 800ms ease-in-out, right 800ms ease-in-out;
+}
+
+/* Text Box */
+
+.text__box {
+    gap: 1rem;
+    width: 100%;
+    padding: 3rem 0 0;
+    flex-direction: column;
+}
+
+.text__box h1 {
+    font-family: 'Rubik Glitch', 'Rubik', sans-serif;
+    font-weight: 100;
+    animation: glitch 300ms infinite;
+}
+
+.text__box button {
+    padding: 0.75rem 1rem;
+    border: none;
+    color: black;
+    font-weight: 700;
+    border-radius: 1rem;
+}
+
+/* Classics */
+.classics,
+.trending,
+.shoes {
+    width: 100%;
+    padding: 2rem 0 0;
+}
+
+.classics h1,
+.trending h1,
+.shoes h1,
+.brands h1 {
+    padding: 2rem 4rem 0;
+}
+
+.classics__grid,
+.trending__grid,
+.shoes__grid {
+    width: 100%;
+    padding: 2rem 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    gap: 1rem;
+}
+
+.classics__grid figure {
+    background: linear-gradient(to top, #F2F2F2 75%, white);
+}
+
+.classics__grid figure,
+.trending__grid figure,
+.shoes__grid figure {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem 0;
+    position: relative;
+    border-radius: 2rem;
+    background-color: #F2F2F2;
+    margin-top: 10rem;
+}
+
+.shoes__grid figure {
+    height: 100%;
+}
+
+.trending__grid figure,
+.shoes__grid figure {
+    margin-top: 0;
+}
+
+.classics__grid figure img,
+.trending__grid figure img,
+.shoes__grid figure img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10rem;
+    object-fit: contain;
+    transition: transform 300ms ease-in-out, opacity 400ms ease-in-out;
+}
+
+.shoes__grid figure img.blink {
+    opacity: 0;
+}
+
+.trending__grid figure,
+.shoes__grid figure {
+    position: relative;
+}
+
+.shoes__grid figure {
+    padding: 0;
+}
+
+.trending__grid figure img,
+.shoes__grid figure img {
+    position: static;
+    border-radius: 2rem;
+}
+
+.classics__grid figure img:hover {
+    transform: translateY(-1rem);
+}
+
+.classics__grid h3 {
+    padding: 0 2rem;
+}
+
+.classics__grid figure figcaption {
+    width: 100%;
+    gap: 0.75rem;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    flex-direction: column;
+}
+
+.classics__grid figure figcaption button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* Trending */
+.trending__grid figure h4,
+.shoes__grid figure h4 {
+    position: absolute;
+    top: 0;
+    margin: 1rem;
+}
+
+.trending__grid .material-icons,
+.trending__grid .material-symbols-outlined,
+.shoes__grid .material-icons,
+.shoes__grid .material-symbols-outlined {
+    position: absolute;
+    margin: 1rem;
+    bottom: 0;
+    right: 0;
+}
+
+/* Brands */
+.brands {
+    width: 100%;
+    ;
+}
+
+.brands__container {
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2rem 4rem 0;
+    justify-content: space-between;
+}
+
+.brands__container figure {
+    gap: 2rem;
+    width: 10rem;
+    height: 10rem;
+    flex: 0 0 18%;
+    object-fit: contain;
+    align-content: center;
+    border-radius: 1rem;
+    background-color: #F2F2F2;
+}
+
+.brands__container figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.offer {
+    width: 100%;
+    gap: 0.75rem;
+    padding: 4rem;
+    text-align: center;
+    flex-direction: column;
+}
+
+.offer img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.offer h1 {
+    font-family: 'Rubik Glitch', 'Rubik', sans-serif;
+    font-weight: 100;
+    animation: glitch 300ms infinite;
+    padding: 1rem 0 0;
+}
+
+footer {
+    width: 100%;
+    display: grid;
+    color: white;
+    padding: 2rem 4rem 2rem;
+    background-color: black;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer .support,
+footer .about,
+footer .stay {
+    display: flex;
+    gap: 0.75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .icons {
+    gap: 1rem;
+    margin: auto;
+}
+
+footer h4 {
+    align-content: center;
+    text-align: center;
+}
