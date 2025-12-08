@@ -1,24 +1,24 @@
 
-var products = document.querySelectorAll('.products__container figure');
-var productContainer = document.querySelector('.products__container');
+const products = document.querySelectorAll('.products__container figure');
+const productContainer = document.querySelector('.products__container');
 
-// Sidebar filters
-var filterShirts = document.getElementById("filters__shirts");
-var filterTShirts = document.getElementById("filters__tshirts");
-var filterShoes = document.getElementById("filters__shoes");
+// Sidebar Filters
+const filterShirts = document.getElementById("filters__shirts");
+const filterTShirts = document.getElementById("filters__tshirts");
+const filterShoes = document.getElementById("filters__shoes");
 
-// Search filter
-var searchInput = document.querySelector(".products__search");
+// Search Filter
+const searchInput = document.querySelector(".products__search");
 
-// Color filters
-var filterRed = document.getElementById("color__red");
-var filterBlue = document.getElementById("color__blue");
-var filterBlack = document.getElementById("color__black");
-var filterWhite = document.getElementById("color__white");
+// Color Filters
+const filterRed = document.getElementById("color__red");
+const filterBlue = document.getElementById("color__blue");
+const filterBlack = document.getElementById("color__black");
+const filterWhite = document.getElementById("color__white");
 
-// Price filter
-var priceSlider = document.querySelector(".product__price");
-var priceValue = document.querySelector(".price__value");
+// Price Filter
+let priceSlider = document.querySelector(".product__price");
+let priceValue = document.querySelector(".price__value");
 
 // Initialize Price Slider
 priceSlider.min = 0;
@@ -28,17 +28,17 @@ priceValue.textContent = "Rs. " + priceSlider.value;
 
 
 function filterProducts() {
-    var textP = searchInput.value.toUpperCase();
-    var maxPrice = parseInt(priceSlider.value);
+    let textP = searchInput.value.toUpperCase();
+    let maxPrice = parseInt(priceSlider.value);
 
-    // Collect selected categories
-    var selectedCategories = [];
+    // Collect Selected Categories
+    const selectedCategories = [];
     if (filterShirts.checked) selectedCategories.push("shirts");
     if (filterTShirts.checked) selectedCategories.push("tshirts");
     if (filterShoes.checked) selectedCategories.push("shoes");
 
-    // Collect selected colors
-    var selectedColors = [];
+    // Collect Selected Colors
+    const selectedColors = [];
     if (filterRed.checked) selectedColors.push("color-red");
     if (filterBlue.checked) selectedColors.push("color-blue");
     if (filterBlack.checked) selectedColors.push("color-black");
@@ -46,25 +46,24 @@ function filterProducts() {
 
 
     products.forEach(function (product) {
-        var productName = product.querySelector("h2").textContent.toUpperCase();
-        var productTags = product.getAttribute("data-tags");
+        const productName = product.querySelector("h2").textContent.toUpperCase();
+        const productTags = product.getAttribute("data-tags");
 
-        // Price logic: Find the first <p> which contains the price (e.g. "Rs. 1,499")
-        var priceElement = product.querySelector("p");
-        var productPrice = 0;
+        const priceElement = product.querySelector("p");
+        let productPrice = 0;
         if (priceElement) {
             productPrice = parseInt(priceElement.textContent.replace(/[^0-9]/g, ''));
         }
 
         // Search Logic
-        var matchesSearch = productName.indexOf(textP) > -1;
+        let matchesSearch = productName.indexOf(textP) > -1;
 
         // Category Logic
-        var matchesCategory = false;
+        let matchesCategory = false;
         if (selectedCategories.length === 0) {
             matchesCategory = true;
         } else {
-            for (var i = 0; i < selectedCategories.length; i++) {
+            for (let i = 0; i < selectedCategories.length; i++) {
                 if (productTags.includes(selectedCategories[i])) {
                     matchesCategory = true;
                     break;
@@ -73,11 +72,11 @@ function filterProducts() {
         }
 
         // Color Logic
-        var matchesColor = false;
+        let matchesColor = false;
         if (selectedColors.length === 0) {
             matchesColor = true;
         } else {
-            for (var i = 0; i < selectedColors.length; i++) {
+            for (let i = 0; i < selectedColors.length; i++) {
                 if (productTags.includes(selectedColors[i])) {
                     matchesColor = true;
                     break;
@@ -86,7 +85,7 @@ function filterProducts() {
         }
 
         // Price Logic
-        var matchesPrice = !isNaN(productPrice) ? productPrice <= maxPrice : true;
+        let matchesPrice = !isNaN(productPrice) ? productPrice <= maxPrice : true;
 
 
         // Final Visibility
@@ -114,3 +113,4 @@ priceSlider.addEventListener("input", function () {
     priceValue.textContent = "Rs. " + this.value;
     filterProducts();
 });
+
