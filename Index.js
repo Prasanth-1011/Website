@@ -1,29 +1,10 @@
-// Mobile Menu
-const menu = document.querySelectorAll(".material-icons.menu");
-menu.forEach(item => {
-    item.addEventListener("click", () => {
-        if (headerMobileLinks.style.left === "0px") {
-            headerMobileLinks.style.left = "-100%";
-        } else {
-            headerMobileLinks.style.left = "0";
-        }
-    });
-});
-
 window.addEventListener("DOMContentLoaded", () => {
     body.setAttribute("style", "scroll-padding-top: 6rem;");
 });
 
-// Close Message
-const closeMessage = document.querySelector(".align-center .disturb");
-const headerMobileLinks = document.querySelector(".header__mobile__links");
-const body = document.querySelector("body");
-
-closeMessage.addEventListener("click", () => {
-    headerBox.setAttribute("style", "display: none;");
-    headerMobileLinks.setAttribute("style", "top: 0;");
-    body.setAttribute("style", "scroll-padding-top: 3rem;");
-});
+window.addEventListener("click", () => {
+    console.log(body.style.scrollPaddingTop);
+})
 
 // Like
 const like = document.querySelectorAll("i.material-symbols-outlined");
@@ -33,31 +14,6 @@ like.forEach(item => {
         item.classList.toggle("material-symbols-outlined");
     });
 });
-
-const home = document.querySelectorAll(".header__links__home");
-home.forEach(item => {
-    item.addEventListener("click", () => {
-        let scrollPaddingTop = body.style.scrollPaddingTop;
-        body.setAttribute("style", "scroll-padding-top: 10rem;");
-        setTimeout(() => {
-            body.setAttribute("style", `scroll-padding-top: ${scrollPaddingTop};`)
-        }, 300);
-    });
-});
-
-// Header Message
-const messages = [
-    "Enjoy Free Delivery, Returns, And Exchanges.",
-    "Signup And Get Welcome Bonus 20% On Your First Purchase.",
-    "Refer Friend And Earn Discount Voucher 10%."
-];
-
-let index = 0;
-
-setInterval(() => {
-    headerMessage.textContent = messages[index];
-    index = (index + 1) % messages.length;
-}, 2000);
 
 // Background Images
 const sliderOne = document.querySelector(".slider__one");

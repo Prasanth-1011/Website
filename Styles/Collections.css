@@ -7,7 +7,7 @@ body {
     scroll-behavior: smooth;
 }
 
-.header__container span {
+.header__container span.align-center {
     display: none;
 }
 
