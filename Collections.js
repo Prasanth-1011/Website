@@ -23,15 +23,22 @@ function filterProducts() {
     const maxPrice = parseInt(priceSlider.value);
 
     const selectedCategories = [];
-    if (filterShirts.checked) selectedCategories.push("shirts");
-    if (filterTShirts.checked) selectedCategories.push("tshirts");
-    if (filterShoes.checked) selectedCategories.push("shoes");
+    if (filterShirts.checked)
+        selectedCategories.push("shirts");
+    if (filterTShirts.checked)
+        selectedCategories.push("tees");
+    if (filterShoes.checked)
+        selectedCategories.push("shoes");
 
     const selectedColors = [];
-    if (filterRed.checked) selectedColors.push("color-red");
-    if (filterBlue.checked) selectedColors.push("color-blue");
-    if (filterBlack.checked) selectedColors.push("color-black");
-    if (filterWhite.checked) selectedColors.push("color-white");
+    if (filterRed.checked)
+        selectedColors.push("color-red");
+    if (filterBlue.checked)
+        selectedColors.push("color-blue");
+    if (filterBlack.checked)
+        selectedColors.push("color-black");
+    if (filterWhite.checked)
+        selectedColors.push("color-white");
 
     products.forEach(function (product) {
         const productName = product.querySelector("h2").textContent.toUpperCase();
