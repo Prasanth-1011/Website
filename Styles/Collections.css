@@ -42,6 +42,10 @@ main {
     text-align: center;
 }
 
+table td {
+    padding: 0.25rem;
+}
+
 .filters__product span,
 .filters__price span,
 .filters__color span {
