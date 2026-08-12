@@ -108,6 +108,6 @@ to dynamically update and control elements.
 
 ## Live Demo
 
-[Udemy Website](https://prasanth-1011.github.io/Website)
+[Multi Page Website](https://prasanth-1011.github.io/Website)
 
 ---
